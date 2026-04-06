@@ -31,7 +31,6 @@ public class Config {
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private static boolean validateItemName(final Object obj) {
-        // 여기도 ResourceLocation 대신 Identifier를 사용하도록 수정했어!
         return obj instanceof String itemName && BuiltInRegistries.ITEM.containsKey(Identifier.parse(itemName));
     }
 }
